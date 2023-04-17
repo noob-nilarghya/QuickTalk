@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickTalk chat app</title>
+
+    <link rel="icon" href="/images/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@400;600;&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <section class="chat__section">
+        <div class="brand">
+            <img height="40" src="/images/QuickTalk.png" alt="">
+            <h1>QuickTalk</h1>
+        </div>
+        <!--
+        <div class="message__area">
+            <div class="incoming message">
+                <h4>Nilarghya</h4>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+            </div>
+            <div class="outgoing message">
+                <h4>Sus</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, libero! </p>
+            </div>
+        </div>
+        -->
+        <div class="message__area">
+            <!-- This content will be generated dynamically using javascript in client.js -->
+        </div>
+        
+        <div class="text">
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+            <img class="sendImg" src="/images/send.svg" alt="send">
+        </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- At this point, client library will be loaded and we will get a variable named 'io' in client.js -->
+    <script src="/client.js"></script>
+</body>
+</html>
+

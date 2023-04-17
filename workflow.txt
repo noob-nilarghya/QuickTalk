@@ -1,0 +1,29 @@
+****  See we have mainly 3 files: 'index.html', 'server.js', 'client.js'
+
+1. As this is a express project, so we need to put all static files like styles.css, client.js and images in public folder
+2. Message (div) will be dynamically created by javascript in client.js, so we omit that hard coded message div from index.html
+3. First of all we ask user his/her name using prompt (in index.html)
+
+
+
+
+
+
+**** The work flow is preety simple:
+
+1. User write the message, press enter or click on send button to send the message, which we can get by 'textArea.value'.
+2. We create a class 'msg' with 2 property, name and message. We append that dynamic HTML using javascript (in client.js)
+
+3. CLIENT SIDE ---> SERVER SITE
+    a> We then send msg to server (using socket.emit()) 
+    b> Server will recieve that messagesend from client side (using socket.on())
+
+4. SERVER SIDE ---> OTHER USER's CLIENT SIDE
+    a> Server then broadcast that msg to all other users who are connected to this socket/server (except self) (using socket.broadcast.emit())
+    b> Client (other users) then recieve that msg (using socket.on()), and then append that dynamic HTML using javascript (in client.js)
+
+
+
+
+
+Thats it .....
