@@ -13,10 +13,10 @@ http.listen(PORT, ()=> {
     console.log(`LISTENING ON PORT ${PORT}`);
 });
 
-app.use(express.static(path.join(__dirname, 'public'))); 
+app.use(express.static(path.join(process.cwd(), 'public'))); 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html'));
+    res.sendFile(path.join(process.cwd(), '/index.html'));
 });
 
 // we need to setup and configure socket.io in both server and client site js
